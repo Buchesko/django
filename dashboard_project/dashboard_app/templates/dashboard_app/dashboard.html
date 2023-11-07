@@ -1,0 +1,22 @@
+<!-- dashboard.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twój Dashboard</title>
+</head>
+<body>
+    <h1>Prześlij plik Excel</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Wyślij</button>
+    </form>
+
+    <h1>Tabela z excela</h1>
+    <!-- Wyświetl tabelę z danymi z excela -->
+
+    <h2>Wykres</h2>
+    <img src="{% static 'plot.png' %}" alt="Wykres danych z excela">
+</body>
+</html>
